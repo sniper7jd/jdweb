@@ -304,14 +304,14 @@
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me</span><span class="animate scroll" style="--i:1;"></span></h2>
 
-        <form action="#">
+        <form action="https://formspree.io/f/meoyryoa" method="POST">
             <div class="input-box">
                 <div class="input-field">
-                    <input type="text" placeholder="Full Name" required>
+                    <input type="text" placeholder="Full Name" name="name" required>
                     <span class="focus"></span>
                 </div>
                 <div class="input-field">
-                    <input type="text" placeholder="Email" required>
+                    <input type="text" placeholder="Email" name="email" required>
                     <span class="focus"></span>
                 </div>
 
@@ -319,19 +319,14 @@
             </div>
             <div class="input-box">
                 <div class="input-field">
-                    <input type="number" placeholder="Mobile Number" required>
+                    <input type="text" placeholder="Email Subject"  required>
                     <span class="focus"></span>
                 </div>
-                <div class="input-field">
-                    <input type="text" placeholder="Email Subject" required>
-                    <span class="focus"></span>
-                </div>
-
                 <span class="animate scroll" style="--i:5;"></span>
             </div>
 
             <div class="textarea-field">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                <textarea name="message" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
                 <span class="focus"></span>
 
                 <span class="animate scroll" style="--i:7;"></span>

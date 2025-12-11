@@ -712,6 +712,22 @@ span {
     width: 100%;
 }
 
+.contact form .input-box:nth-child(1) {
+    justify-content: center;
+}
+
+.contact form .input-box:nth-child(1) .input-field {
+    width: 49%; /* Revert to original width */
+}
+
+.contact form .input-box:nth-child(2) {
+    justify-content: center;
+}
+
+.contact form .input-box:nth-child(2) .input-field {
+    width: 100%; /* Apply 100% width to Email Subject */
+}
+
 .contact form .textarea-field {
     position: relative;
     margin: .8rem 0 2.7rem;
