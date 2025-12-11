@@ -261,9 +261,10 @@ section {
 .home-imgHover {
     position: absolute;
     top: 15%;
-    right: 0;
+    right: 5%; /* Adjusted to move left */
     width: 45%;
-    height: 100%;
+    max-width: 600px; /* Increased max-width */
+    /* height and max-height will be managed by image itself */
     background: transparent;
     transition: 3s;
 }
@@ -271,6 +272,15 @@ section {
 .home-imgHover:hover {
     background: var(--bg-color);
     opacity: .8;
+}
+
+.home-imgHover img.profile-img {
+    width: 100%;
+    height: auto;
+    max-height: 600px; /* Increased max-height for image itself */
+    object-fit: contain;
+    border-radius: 8px;
+    margin-bottom: 1rem;
 }
 
 .projects {
@@ -345,22 +355,51 @@ span {
 }
 
 .modal-content {
-    background: #111;
-    font-size: 1.5rem;
-    padding: 2rem;
-    border-radius: 12px;
-    max-width: 400px;
+    background: var(--second-bg-color);
+    font-size: 1.6rem;
+    padding: 3rem;
+    border-radius: 15px;
+    max-width: 700px; /* Increased max-width */
     width: 90%;
     position: relative;
+    text-align: left;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    line-height: 1.6;
+}
+
+.modal-content h3 {
+    font-size: 2.8rem;
+    color: var(--main-color);
+    margin-bottom: 1.5rem;
     text-align: center;
+}
+
+.modal-content p {
+    margin-bottom: 1.5rem; /* Increased spacing between paragraphs */
+    color: var(--text-color);
+}
+
+.modal-content p:last-child {
+    margin-bottom: 0; /* No margin after the last paragraph */
+}
+
+.modal-content p a {
+    color: var(--main-color);
+    text-decoration: underline;
 }
 
 .close {
     position: absolute;
     top: 1rem;
-    right: 1rem;
-    font-size: 2rem;
+    right: 1.5rem;
+    font-size: 3rem;
+    color: var(--main-color);
     cursor: pointer;
+    transition: .3s ease;
+}
+
+.close:hover {
+    color: var(--text-color);
 }
 
 @media (max-width: 900px) {
@@ -471,8 +510,19 @@ span {
 }
 
 .education-content .content p {
-    font-size: 1.6rem;
+    font-size: 1.8rem; /* Increased font size */
     padding-top: .5rem;
+}
+
+.education-content .content ul {
+    list-style-type: disc; /* Ensure bullet points are visible */
+    margin-left: 1.5rem;
+    padding-top: .5rem;
+}
+
+.education-content .content ul li {
+    font-size: 1.8rem; /* Increased font size for list items */
+    margin-bottom: .5rem;
 }
 
 .skills {
@@ -755,8 +805,8 @@ span {
 }
 
 .animate.scroll {
-    transition: 1s ease;
-    transition-delay: calc(.2s / var(--i));
+    transition: .375s ease; /* 25% faster (0.5s * 0.75) */
+    transition-delay: calc(.075s * var(--i)); /* 25% faster (0.1s * 0.75) */
     animation: none;
 }
 
