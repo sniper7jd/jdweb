@@ -668,6 +668,7 @@ span {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    gap: 2%; /* Add a gap between input fields */
 }
 
 .contact form .input-box .input-field {
@@ -712,20 +713,17 @@ span {
     width: 100%;
 }
 
-.contact form .input-box:nth-child(1) {
-    justify-content: center;
-}
-
+/* No specific justify-content for nth-child(1) - rely on general .contact form .input-box styles */
 .contact form .input-box:nth-child(1) .input-field {
-    width: 49%; /* Revert to original width */
+    width: 49%; /* Ensure it's 49% as per original side-by-side layout */
 }
 
 .contact form .input-box:nth-child(2) {
-    justify-content: center;
+    justify-content: center; /* Keep Email Subject centered */
 }
 
 .contact form .input-box:nth-child(2) .input-field {
-    width: 100%; /* Apply 100% width to Email Subject */
+    width: 100%; /* Keep Email Subject full width */
 }
 
 .contact form .textarea-field {
@@ -1094,4 +1092,8 @@ section:nth-child(odd) .animate.scroll,
     100% {
         width: 0;
     }
+}
+
+.home strong {
+    color: var(--main-color);
 }
