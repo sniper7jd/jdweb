@@ -267,6 +267,7 @@ section {
     /* height and max-height will be managed by image itself */
     background: transparent;
     transition: 3s;
+    overflow: hidden; /* Add this line */
 }
 
 .home-imgHover:hover {
@@ -281,6 +282,7 @@ section {
     object-fit: contain;
     border-radius: 8px;
     margin-bottom: 1rem;
+    clip-path: inset(0 0 3% 0); /* Reduce 3% from the bottom */
 }
 
 .projects {
@@ -793,7 +795,7 @@ span {
 }
 
 .animate.home-img {
-    width: 50%;
+    width: 100%;
 }
 
 .logo .animate,
@@ -826,6 +828,10 @@ section:nth-child(odd) .animate.scroll,
 .footer.show-animate .animate.scroll {
     transition-delay: calc(.2s * var(--i));
     width: 0;
+}
+
+.home:not(.show-animate) .home-imgHover {
+    width: 0; /* Ensures the container itself collapses */
 }
 
 ::-moz-selection { /* Code for Firefox */
@@ -929,10 +935,39 @@ section:nth-child(odd) .animate.scroll,
         transition-delay: .25s;
     }
 
+    /* Adjusted home section for responsiveness */
+    .home {
+        flex-direction: column-reverse; /* Stack image above content */
+        padding-top: 15rem; /* Adjust padding to prevent overlap with header */
+    }
+
+    .home-content {
+        text-align: center;
+        max-width: 100%;
+    }
+
     .home-imgHover {
-        pointer-events: none;
-        background: var(--bg-color);
-        opacity: .6;
+        position: relative; /* Remove absolute positioning */
+        top: auto;
+        right: auto;
+        width: 80%; /* Adjust width for smaller screens */
+        max-width: 400px; /* Limit max width */
+        margin: 2rem auto; /* Center the image */
+        pointer-events: auto; /* Re-enable pointer events if disabled */
+        opacity: 1; /* Reset opacity if it was reduced */
+        background: transparent; /* Reset background */
+    }
+
+    .home-imgHover img.profile-img {
+        clip-path: inset(0 0 3% 0); /* Ensure the clip-path is maintained */
+    }
+
+    .home-sci {
+        position: relative; /* Change to relative positioning */
+        width: 100%; /* Make it take full width */
+        max-width: 170px; /* Keep the max-width for larger small screens */
+        margin: 2rem auto; /* Center the element */
+        bottom: auto; /* Remove fixed bottom positioning */
     }
 }
 
