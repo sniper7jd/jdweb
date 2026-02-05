@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | JD</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">jd.</a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="experience.html">Experience</a>
+            <a href="skills.html">Skills</a>
+            <a href="projects.html" class="active">Projects</a>
+            <a href="certifications.html">Certifications</a>
+            <a href="contact.html">Contact</a>
+            <span class="active-nav"></span>
+        </nav>
+    </header>
+
+    <section class="projects" id="projects">
+        <h2 class="heading">Projects <span>by jd</span></h2>
+
+        <!-- AI/ML -->
+        <h3 class="project-section-title">AI / ML</h3>
+        <div class="projects-grid">
+            <div class="project-box" data-modal="modal-nlp">
+                <img src="images/projects_img/nlp.png" alt="NLP">
+            </div>
+            <div class="project-box" data-modal="modal-petadoption">
+                <img src="images/projects_img/petadoption.png" alt="Pet Adoption">
+            </div>
+        </div>
+
+        <!-- HCI & Unity -->
+        <h3 class="project-section-title">HCI &amp; Unity</h3>
+        <div class="projects-grid">
+            <div class="project-box" data-modal="modal-zooadmin">
+                <img src="images/projects_img/zooadmin.png" alt="ZooAdmin">
+            </div>
+            <div class="project-box" data-modal="modal-sandwich">
+                <img src="images/projects_img/sandwich.png" alt="Sandwich">
+            </div>
+            <div class="project-box" data-modal="modal-echomaze">
+                <img src="images/projects_img/echomaze.png" alt="EchoMaze">
+            </div>
+        </div>
+
+        <!-- Web Dev -->
+        <h3 class="project-section-title">Web Dev</h3>
+        <div class="projects-grid">
+            <div class="project-box" data-modal="modal-petconnect">
+                <img src="images/projects_img/petconnect.png" alt="PetConnect">
+            </div>
+            <div class="project-box" data-modal="modal-astroclub">
+                <img src="images/projects_img/astroclub.png" alt="AstroClub">
+            </div>
+        </div>
+
+        <!-- Python (Tkinter/Turtle) -->
+        <h3 class="project-section-title">Python (Tkinter / Turtle)</h3>
+        <div class="projects-grid">
+            <div class="project-box" data-modal="modal-pomodoro">
+                <img src="images/projects_img/pomodoro.png" alt="Pomodoro">
+            </div>
+            <div class="project-box" data-modal="modal-pong">
+                <img src="images/projects_img/pong.png" alt="Pong">
+            </div>
+        </div>
+
+        <!-- DSA -->
+        <h3 class="project-section-title">DSA</h3>
+        <div class="projects-grid">
+            <div class="project-box" data-modal="modal-tfidf">
+                <img src="images/projects_img/tfidf.png" alt="TFIDF">
+            </div>
+        </div>
+
+        <!-- Modals -->
+        <div class="modal" id="modal-nlp">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>NLP – Humor Detection</h3>
+                <p>This Natural Language Processing project focused on detecting humor in movie reviews using a large subset of the IMDb dataset. I implemented transformer-based models for classification, fine-tuning them for humor detection in text. Given the limited GPU resources, I explored zero-shot and few-shot learning techniques to maximize model performance without extensive training. This allowed me to evaluate how transformer models like BART or RoBERTa perform when generalizing to niche tasks. I preprocessed the data for tokenization and cleaning, and implemented evaluation metrics such as F1-score and accuracy. The project challenged me to work with real-world constraints and taught me how to manage large-scale NLP tasks efficiently, optimizing for both resource usage and accuracy.</p>
+                <p>Link to jupyter notebook: <a href="https://colab.research.google.com/drive/18Xhvr6SuTBZInrwycju-o-5bvgduX-_H?usp=drive_link">Click Here</a></p>
+            </div>
+        </div>
+        <div class="modal" id="modal-petadoption">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Pet Adoption (Purrfect Match)</h3>
+                <p>Purrfect Match is a Flask-based web application that connects pet owners to arrange playdates, meetups, and community events for their pets. I designed it with features like user registration, pet profiles, real-time chat, and a search function to find compatible pets based on preferences. The backend was built in Python using Flask, with HTML/CSS/JavaScript for the frontend. I also integrated basic database functionality for storing user and pet data. Adding real-time chat pushed me to understand asynchronous communication and socket programming concepts.</p>
+                <p>Link to website (database gets wiped as paid hosting not opted): <a href="https://purrfect-kx2p.onrender.com/auth/login?next=%2F">Click Here</a></p>
+            </div>
+        </div>
+        <div class="modal" id="modal-zooadmin">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>ZooAdmin</h3>
+                <p>ZooAdmin is an HCI project built in Unity that focuses on zoo administration and animal management. The application combines user-centered design with interactive 3D environments to simulate zoo operations, animal care workflows, and visitor experience. I designed the interface and interactions to explore how spatial UI and direct manipulation can support administrative tasks in a simulated zoo setting.</p>
+            </div>
+        </div>
+        <div class="modal" id="modal-sandwich">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Sandwich</h3>
+                <p>Sandwich is an HCI project developed in Unity that offers an interactive sandwich-building experience. Users assemble ingredients step-by-step in a 3D environment, exploring how gesture-based or pointer-based interaction can make a familiar task engaging and accessible. The project was used to study usability and feedback design in procedural, goal-oriented interfaces.</p>
+            </div>
+        </div>
+        <div class="modal" id="modal-echomaze">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>EchoMaze</h3>
+                <p>EchoMaze is an HCI project built in Unity that combines maze navigation with echo-based or audio feedback. Users navigate through a 3D maze where sound and spatial cues guide or challenge the experience. The project explores how non-visual feedback and spatial audio can shape wayfinding and immersion in game-like environments.</p>
+            </div>
+        </div>
+        <div class="modal" id="modal-petconnect">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>PetConnect</h3>
+                <p>PetConnect is a web application that helps pet owners find and connect with adoptable pets or other pet owners. I built it with a focus on clear, responsive design and easy browsing of pet profiles. The stack includes front-end technologies for a fast, accessible experience, and the project reinforced my skills in building user-friendly web interfaces for community and adoption use cases.</p>
+            </div>
+        </div>
+        <div class="modal" id="modal-astroclub">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>AstroClub</h3>
+                <p>AstroClub is a responsive website I developed for the Astronomy Club using HTML, CSS, and JavaScript. The goal was to improve outreach and communication: members can see upcoming stargazing events, meetings, and announcements in one place. The site includes a homepage, events calendar, and sections for news and club photos, with a mobile-first layout so it works well on phones and desktops. It’s deployed and in use for real-world club communication.</p>
+                <p>Link to website: <a href="https://astroclub-ten.vercel.app/">Visit AstroClub</a></p>
+            </div>
+        </div>
+        <div class="modal" id="modal-pomodoro">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Pomodoro</h3>
+                <p>I recreated the classic Pomodoro technique in a standalone desktop application using Python and Tkinter. The app provides a simple interface that helps users focus on tasks using timed work intervals followed by short breaks. It includes a timer display, session tracking, start/stop/reset buttons, and a visual countdown bar. Building this project allowed me to strengthen my understanding of Python GUI programming and event-driven development.</p>
+            </div>
+        </div>
+        <div class="modal" id="modal-pong">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Pong</h3>
+                <p>I built a version of the classic Pong game using Python's turtle module. The game features two paddles, a bouncing ball, and a scoring system. I designed the interface using turtle graphics and implemented game mechanics like collision detection, velocity adjustments, and paddle control with keyboard bindings. This project helped me grasp core programming concepts such as loops, conditionals, coordinate geometry, and real-time input handling.</p>
+            </div>
+        </div>
+        <div class="modal" id="modal-tfidf">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>TFIDF</h3>
+                <p>In this project, I built a Java-based search system for an online library using the TF-IDF (Term Frequency–Inverse Document Frequency) algorithm to retrieve and rank relevant documents. The system included two interfaces—Text and Library—used to compare performance and analyze how different data structures affect search efficiency. I experimented with structures such as TreeMap, HashMap, and ArrayList to evaluate their impact on both runtime and memory usage across various tasks like indexing, term frequency counting, and ranking. The focus was on determining which data structure worked best under each interface in terms of time and space complexity.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2025 | Designed by Jagrit Dhingra | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
