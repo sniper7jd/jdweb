@@ -89,15 +89,19 @@ section {
 .home {
     display: flex;
     align-items: center;
-    padding: 0 9%;
-    background: url('/images/home.jpg') no-repeat;
-    background-size: cover;
-    background-position: center;
+    justify-content: space-between;
+    gap: 4rem;
+    position: relative;
+    min-height: 100vh;
+    padding: 10rem 9% 8rem;
+    overflow: hidden;
 }
 
 .home-content {
+    flex: 1 1 48%;
     max-width: 60rem;
     z-index: 99;
+    min-width: 0;
 }
 
 .home-content h1 {
@@ -162,7 +166,7 @@ section {
 .home-content p {
     position: relative;
     font-size: 1.6rem;
-    margin: 2rem 0 4rem;
+    margin: 1.4rem 0 2rem;
 }
 
 .btn-box {
@@ -271,30 +275,30 @@ section {
 }
 
 .home-imgHover {
-    position: absolute;
-    top: 15%;
-    right: 5%; /* Adjusted to move left */
-    width: 45%;
-    max-width: 600px; /* Increased max-width */
-    /* height and max-height will be managed by image itself */
+    position: relative;
+    flex: 0 1 auto;
+    width: min(42vw, 520px);
+    max-height: calc(100vh - 18rem);
     background: transparent;
-    transition: 3s;
-    overflow: hidden; /* Add this line */
+    transition: opacity .3s;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .home-imgHover:hover {
-    background: var(--bg-color);
-    opacity: .8;
+    opacity: .9;
 }
 
 .home-imgHover img.profile-img {
+    display: block;
     width: 100%;
     height: auto;
-    max-height: 600px; /* Increased max-height for image itself */
+    max-height: calc(100vh - 18rem);
     object-fit: contain;
+    object-position: center top;
     border-radius: 8px;
-    margin-bottom: 1rem;
-    clip-path: inset(0 0 3% 0); /* Reduce 3% from the bottom */
 }
 
 .projects {
@@ -336,6 +340,10 @@ span {
     justify-items: center;
 }
 
+.projects-grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
 .project-box {
     background: #fff;
     border-radius: 12px;
@@ -355,6 +363,34 @@ span {
 
 .project-box:hover {
     transform: translateY(-8px) scale(1.03);
+}
+
+.project-box-text {
+    background: var(--bg-color);
+    border: .2rem solid var(--main-color);
+    justify-content: center;
+}
+
+.project-box-placeholder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.project-box-placeholder h4 {
+    font-size: 2.2rem;
+    color: var(--main-color);
+    line-height: 1.3;
+    margin-bottom: 1.2rem;
+}
+
+.project-box-placeholder p {
+    font-size: 1.4rem;
+    color: var(--text-color);
 }
 
 .project-box img {
@@ -433,7 +469,8 @@ span {
 }
 
 @media (max-width: 600px) {
-    .projects-grid {
+    .projects-grid,
+    .projects-grid-2 {
         grid-template-columns: 1fr;
     }
 }
@@ -536,6 +573,10 @@ span {
 .education-content .content p {
     font-size: 1.8rem; /* Increased font size */
     padding-top: .5rem;
+}
+
+.education-content .content strong {
+    color: var(--main-color);
 }
 
 .education-content .content ul {
@@ -868,7 +909,37 @@ span {
   }
 
 
-/* BREAKPOINTS */
+@media (max-width: 1100px) and (min-width: 769px) {
+    .home-content h1 {
+        font-size: 4.2rem;
+    }
+
+    .home-imgHover {
+        width: min(38vw, 400px);
+    }
+}
+
+@media (max-height: 740px) and (min-width: 769px) {
+    .home {
+        padding-top: 8rem;
+        padding-bottom: 6rem;
+        gap: 2rem;
+    }
+
+    .home-imgHover {
+        width: min(36vw, 400px);
+        max-height: calc(100vh - 14rem);
+    }
+
+    .home-imgHover img.profile-img {
+        max-height: calc(100vh - 14rem);
+    }
+
+    .home-content p {
+        margin: 1.2rem 0 2rem;
+    }
+}
+
 @media (max-width: 1200px) {
     html {
         font-size: 55%;
@@ -885,7 +956,8 @@ span {
     }
 
     .home {
-        padding: 0 4%;
+        padding: 10rem 4% 8rem;
+        gap: 2.5rem;
     }
 
     .footer {
@@ -952,10 +1024,15 @@ span {
         transition-delay: .25s;
     }
 
-    /* Adjusted home section for responsiveness */
+    /* Stack image above copy on tablets and phones */
     .home {
-        flex-direction: column-reverse; /* Stack image above content */
-        padding-top: 15rem; /* Adjust padding to prevent overlap with header */
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 12rem;
+        padding-bottom: 4rem;
+        gap: 2rem;
+        overflow: visible;
     }
 
     .home-content {
@@ -964,19 +1041,18 @@ span {
     }
 
     .home-imgHover {
-        position: relative; /* Remove absolute positioning */
-        top: auto;
-        right: auto;
-        width: 80%; /* Adjust width for smaller screens */
-        max-width: 400px; /* Limit max width */
-        margin: 2rem auto; /* Center the image */
-        pointer-events: auto; /* Re-enable pointer events if disabled */
-        opacity: 1; /* Reset opacity if it was reduced */
-        background: transparent; /* Reset background */
+        width: min(72vw, 340px);
+        max-height: 42vh;
+        margin: 0 auto;
+        pointer-events: auto;
+        opacity: 1;
+        background: transparent;
+        order: -1;
     }
 
     .home-imgHover img.profile-img {
-        clip-path: inset(0 0 3% 0); /* Ensure the clip-path is maintained */
+        max-height: 42vh;
+        object-position: center top;
     }
 
     .home-sci {
@@ -1005,6 +1081,15 @@ span {
     .home-sci a {
         width: 38px;
         height: 38px;
+    }
+
+    .home-imgHover {
+        width: min(80vw, 280px);
+        max-height: 36vh;
+    }
+
+    .home-imgHover img.profile-img {
+        max-height: 36vh;
     }
 }
 
