@@ -41,6 +41,16 @@ document.querySelectorAll('.project-box').forEach(box => {
         document.getElementById(modalId).style.display = 'flex';
     });
 });
+document.querySelectorAll('.project-links a').forEach(link => {
+    link.addEventListener('click', e => e.stopPropagation());
+});
+document.querySelectorAll('[data-open-modal]').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        this.closest('.modal').style.display = 'none';
+        document.getElementById(this.getAttribute('data-open-modal')).style.display = 'flex';
+    });
+});
 document.querySelectorAll('.modal .close').forEach(btn => {
     btn.addEventListener('click', function() {
         this.closest('.modal').style.display = 'none';

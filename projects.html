@@ -51,8 +51,11 @@
             <div class="project-box" data-modal="modal-nlp">
                 <img src="images/projects_img/nlp.png" alt="NLP">
             </div>
-            <div class="project-box" data-modal="modal-petadoption">
-                <img src="images/projects_img/petadoption.png" alt="Pet Adoption">
+            <div class="project-box project-box-with-links" data-modal="modal-petadoption">
+                <img src="images/projects_img/purrfect-v1.webp" alt="Purrfect Match, version 1 built with Flask">
+                <div class="project-links">
+                    <a href="https://github.com/sniper7jd/purrfect/tree/v1-flask" target="_blank" rel="noopener noreferrer">Code (v1)</a>
+                </div>
             </div>
             <div class="project-box" data-modal="modal-iplrag">
                 <img src="images/projects_img/agenticrag.png" alt="Agentic RAG">
@@ -76,8 +79,12 @@
         <!-- Web Dev -->
         <h3 class="project-section-title">Web Dev</h3>
         <div class="projects-grid">
-            <div class="project-box" data-modal="modal-petconnect">
-                <img src="images/projects_img/petconnect.png" alt="PetConnect">
+            <div class="project-box project-box-with-links" data-modal="modal-petconnect">
+                <img src="images/projects_img/petconnect.webp" alt="PetConnect feed on a phone">
+                <div class="project-links">
+                    <a href="https://purrfect-ml4d.onrender.com" target="_blank" rel="noopener noreferrer">Live demo</a>
+                    <a href="https://github.com/sniper7jd/purrfect" target="_blank" rel="noopener noreferrer">Code</a>
+                </div>
             </div>
             <div class="project-box" data-modal="modal-astroclub">
                 <img src="images/projects_img/astroclub.png" alt="AstroClub">
@@ -139,9 +146,10 @@
         <div class="modal" id="modal-petadoption">
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <h3>Pet Adoption (Purrfect Match)</h3>
-                <p>Purrfect Match is a Flask-based web application that connects pet owners to arrange playdates, meetups, and community events for their pets. I designed it with features like user registration, pet profiles, real-time chat, and a search function to find compatible pets based on preferences. The backend was built in Python using Flask, with HTML/CSS/JavaScript for the frontend. I also integrated basic database functionality for storing user and pet data. Adding real-time chat pushed me to understand asynchronous communication and socket programming concepts.</p>
-                <p>Link to website (database gets wiped as paid hosting not opted): <a href="https://purrfect-kx2p.onrender.com/auth/login?next=%2F">Click Here</a></p>
+                <h3>Purrfect Match (v1)</h3>
+                <p>Purrfect Match was a Spring 2025 team project: a Flask and SQLAlchemy web app that connects pet owners to arrange playdates, meetups, and community events. It had user registration, pet profiles, direct messaging, event RSVPs with email confirmations, and map-based search for compatible pets.</p>
+                <p>I later rebuilt it from scratch in Django as <a href="#" data-open-modal="modal-petconnect">PetConnect</a>.</p>
+                <p>Source for v1: <a href="https://github.com/sniper7jd/purrfect/tree/v1-flask" target="_blank" rel="noopener noreferrer">GitHub (v1-flask)</a></p>
             </div>
         </div>
         <div class="modal" id="modal-zooadmin">
@@ -169,7 +177,10 @@
             <div class="modal-content">
                 <span class="close">&times;</span>
                 <h3>PetConnect</h3>
-                <p>PetConnect is a web application that helps pet owners find and connect with adoptable pets or other pet owners. I built it with a focus on clear, responsive design and easy browsing of pet profiles. The stack includes front-end technologies for a fast, accessible experience, and the project reinforced my skills in building user-friendly web interfaces for community and adoption use cases.</p>
+                <p>PetConnect is a social network and playdate matcher for pets, and my Django rebuild of Purrfect Match. Owners share posts and stories, find compatible playmates nearby, and chat in real time.</p>
+                <p>Highlights: a ranked compatibility score computed in SQL, real-time chat over Ably with per-conversation tokens, a Leaflet / OpenStreetMap map that loads only the visible area, HTMX infinite scroll, a constant query count per page, and a CI-tested Docker deploy on free hosting.</p>
+                <p>Stack: Django 5.2, HTMX, Alpine.js, Tailwind CSS, PostgreSQL (Neon), Ably, Cloudinary.</p>
+                <p>Links: <a href="https://purrfect-ml4d.onrender.com" target="_blank" rel="noopener noreferrer">Live demo</a> (click "Try the live demo"; the free server may take a few seconds to wake) · <a href="https://github.com/sniper7jd/purrfect" target="_blank" rel="noopener noreferrer">GitHub</a></p>
             </div>
         </div>
         <div class="modal" id="modal-astroclub">

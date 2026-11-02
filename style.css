@@ -401,6 +401,36 @@ span {
     margin-bottom: 1rem;
 }
 
+.project-box-with-links img {
+    flex: 1;
+    min-height: 0;
+    height: auto;
+    margin-bottom: 1.2rem;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+}
+
+.project-links a {
+    flex: 1;
+    padding: .8rem 1rem;
+    border: .2rem solid var(--main-color);
+    border-radius: 4rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--main-color);
+    transition: .3s ease;
+}
+
+.project-links a:hover,
+.project-links a:focus-visible {
+    background: var(--main-color);
+    color: var(--bg-color);
+}
+
 .modal {
     display: none;
     position: fixed;
