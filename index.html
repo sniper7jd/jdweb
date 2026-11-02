@@ -263,10 +263,13 @@
                 </article>
 
                 <article class="project" data-modal="modal-petadoption">
-                    <h3>Purrfect Match</h3>
+                    <h3>Purrfect Match <span class="project-tag">v1</span></h3>
                     <div class="project-row">
-                        <img src="images/projects_img/petadoption.png" alt="Purrfect Match">
-                        <p>Flask app for pet playdates: profiles, search, and real-time chat.</p>
+                        <img src="images/projects_img/purrfect-v1.webp" alt="Purrfect Match, version 1 built with Flask" loading="lazy">
+                        <p>The Spring 2025 Flask original: pet profiles, search, messaging, and community events. Later rebuilt as PetConnect.</p>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/sniper7jd/purrfect/tree/v1-flask" target="_blank" rel="noopener noreferrer">Code (v1)</a>
                     </div>
                 </article>
 
@@ -297,8 +300,13 @@
                 <article class="project" data-modal="modal-petconnect">
                     <h3>PetConnect</h3>
                     <div class="project-row">
-                        <img src="images/projects_img/petconnect.png" alt="PetConnect">
-                        <p>A responsive web app for browsing pets and connecting owners.</p>
+                        <img src="images/projects_img/petconnect.webp" alt="PetConnect feed on a phone" loading="lazy">
+                        <p>A social network and playdate matcher for pets: real-time chat, ranked compatibility matching, and an OpenStreetMap playdate map.</p>
+                    </div>
+                    <p class="project-stack">Django 5.2 · HTMX · Ably · Leaflet / OSM · PostgreSQL</p>
+                    <div class="project-links">
+                        <a href="https://purrfect-ml4d.onrender.com" target="_blank" rel="noopener noreferrer">Live demo</a>
+                        <a href="https://github.com/sniper7jd/purrfect" target="_blank" rel="noopener noreferrer">Code</a>
                     </div>
                 </article>
 
@@ -447,9 +455,10 @@
     <div class="modal" id="modal-petadoption" hidden>
         <div class="modal-card">
             <button type="button" class="modal-close" aria-label="Close">&times;</button>
-            <h3>Purrfect Match</h3>
-            <p>Flask web app connecting pet owners for playdates, meetups, and community events — registration, pet profiles, real-time chat, and compatibility search.</p>
-            <p>Link: <a href="https://purrfect-kx2p.onrender.com/auth/login?next=%2F" target="_blank" rel="noopener noreferrer">Live site</a> (database resets on free hosting)</p>
+            <h3>Purrfect Match (v1)</h3>
+            <p>Spring 2025 team project built with Flask and SQLAlchemy, connecting pet owners for playdates, meetups, and community events: registration, pet profiles, messaging, event RSVPs, and map-based search.</p>
+            <p>I later rebuilt it from scratch in Django as <a href="#" data-open-modal="modal-petconnect">PetConnect</a>.</p>
+            <p>Link: <a href="https://github.com/sniper7jd/purrfect/tree/v1-flask" target="_blank" rel="noopener noreferrer">Source for v1 on GitHub</a></p>
         </div>
     </div>
     <div class="modal" id="modal-zooadmin" hidden>
@@ -477,7 +486,10 @@
         <div class="modal-card">
             <button type="button" class="modal-close" aria-label="Close">&times;</button>
             <h3>PetConnect</h3>
-            <p>Web app for finding adoptable pets and other owners, with a focus on clear, responsive browsing of pet profiles.</p>
+            <p>A social network and playdate matcher for pets, and the Django rebuild of Purrfect Match. Owners share posts and stories, find compatible playmates nearby, and chat in real time.</p>
+            <p>Highlights: a ranked compatibility score computed in SQL, real-time chat over Ably with per-conversation tokens, a Leaflet / OpenStreetMap map that loads only the visible area, HTMX infinite scroll, a constant query count per page, and a CI-tested Docker deploy on free hosting.</p>
+            <p>Stack: Django 5.2, HTMX, Alpine.js, Tailwind CSS, PostgreSQL, Ably, Cloudinary.</p>
+            <p>Links: <a href="https://purrfect-ml4d.onrender.com" target="_blank" rel="noopener noreferrer">Live demo</a> (click "Try the live demo"; the free server may take a few seconds to wake) · <a href="https://github.com/sniper7jd/purrfect" target="_blank" rel="noopener noreferrer">GitHub</a></p>
         </div>
     </div>
     <div class="modal" id="modal-astroclub" hidden>

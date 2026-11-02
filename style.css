@@ -440,6 +440,52 @@ img {
     margin: 0;
 }
 
+.project-tag {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 0.4em;
+    padding: 0.15em 0.6em;
+    border: 1px solid #111;
+    border-radius: 999px;
+    font-size: 0.45em;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+.project-stack {
+    margin: 3vh 0 0;
+    font-size: 2vh;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    color: #555;
+}
+
+.project-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 3vh;
+}
+
+.project-links a {
+    padding: 0.7em 1.6em;
+    border: 1px solid #111;
+    font-size: 1.9vh;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #111;
+    text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.project-links a:hover,
+.project-links a:focus-visible {
+    background: #111;
+    color: #fff;
+}
+
 .cert-grid {
     width: 70%;
     margin: 8vh auto 0;

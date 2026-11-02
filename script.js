@@ -16,6 +16,18 @@ document.querySelectorAll('.project').forEach((project) => {
     });
 });
 
+document.querySelectorAll('.project-links a').forEach((link) => {
+    link.addEventListener('click', (event) => event.stopPropagation());
+});
+
+document.querySelectorAll('[data-open-modal]').forEach((link) => {
+    link.addEventListener('click', (event) => {
+        event.preventDefault();
+        closeModal(link.closest('.modal'));
+        openModal(document.getElementById(link.getAttribute('data-open-modal')));
+    });
+});
+
 document.querySelectorAll('.cert-card').forEach((card) => {
     card.addEventListener('click', () => {
         const modal = document.getElementById('cert-modal');
